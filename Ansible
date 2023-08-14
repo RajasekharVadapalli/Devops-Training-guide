@@ -1,4 +1,4 @@
-Ansible Terminology
+ Ansible Terminology
 • Inventory: A list of managed hosts that Ansible can 
 connect to and run commands on.
 • Playbook: A file containing a set of tasks and 
