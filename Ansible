@@ -1,0 +1,56 @@
+Ansible Terminology
+• Inventory: A list of managed hosts that Ansible can 
+connect to and run commands on.
+• Playbook: A file containing a set of tasks and 
+instructions for Ansible to execute on a target host.
+• Module: A script or program that performs a specific 
+task, such as copying a file, installing a package, or 
+restarting a service.
+• Task: A single action to be performed on a target host, 
+such as installing a package or starting a service.
+• Role: A pre-defined set of tasks and configurations for a 
+specific purpose, such as a web server or a database 
+server.
+• Play: A set of tasks and roles to be executed on a target 
+host or group of hosts.
+
+Basic Commands
+• ansible <host-pattern> -m <module-name> -a "<module arguments>": 
+Runs a module on one or more hosts.
+• ansible-playbook <playbook.yml>: Executes a playbook on one 
+or more hosts.
+• ansible-galaxy install <role-name>: Installs a role from 
+Ansible Galaxy, a repository of pre-built roles.
+• ansible-vault create <filename>: Creates a new encrypted file 
+for storing sensitive data.
+• ansible-vault edit <filename>: Edits an existing encrypted 
+file.
+• ansible-vault view <filename>: Views the contents of an 
+encrypted file.
+
+Common Modules
+• apt: Manages packages on Ubuntu and Debian-based 
+systems.
+• yum: Manages packages on Red Hat, CentOS, and 
+Fedora-based systems.
+• file: Manages files and directories.
+• template: Renders a template file with variables and 
+copies the resulting file to a target host.
+• service: Manages system services.
+• user: Manages user accounts and groups.
+
+Examples
+
+• ansible all -m ping: Pings all hosts in the inventory to 
+check connectivity.
+• ansible web -m apt -a "name=nginx state=installed": Installs the 
+Nginx package on all hosts in the "web" group.
+• ansible-playbook deploy.yml -i production: Executes the 
+"deploy.yml" playbook on all hosts in the "production" 
+inventory.
+• ansible-galaxy install geerlingguy.apache: Installs the Apache 
+role from Ansible Galaxy.
+• ansible-vault create secrets.yml: Creates a new encrypted 
+file for storing sensitive data.
+• ansible web -m service -a "name=nginx state=restarted": Restarts 
+the Nginx service on all hosts in the "web" group.
